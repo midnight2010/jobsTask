@@ -1,0 +1,16 @@
+$sm:768px;
+$md:1300px;
+
+
+@mixin sm {
+    @media (max-width:$sm) {
+        @content
+    }
+};
+
+@mixin md {
+    @media (max-width:$md) {
+        @content
+    }
+};
+

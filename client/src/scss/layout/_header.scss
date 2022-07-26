@@ -1,0 +1,91 @@
+@use '../utils/breakpoints' as *;
+
+.desktop{
+    display: flex;
+    height: 7vh;
+    justify-content: space-between;
+    align-items: center;
+
+  @include sm {
+    display: none;
+  }
+}
+  
+
+.search {
+  padding: 10px;
+  margin-left: 20px;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gray;
+  border-radius: 7px;
+
+
+  & input {
+    width: 300px;
+    border: none;
+    outline: none;
+
+  }
+
+
+}
+
+.profile {
+  margin-right:10px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  & img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+}
+
+.mobile {
+  display:none;
+
+  &__links {
+    margin:10px 10px 3px 10px;
+    padding: 5px 5px 3px 5px;
+    & > a {
+      margin-right: 5px;
+    }
+
+    & a.selected {
+      color: black;
+      padding: 10px;
+      opacity: 0.4;
+      border-bottom: 3px solid green;
+      &:link,&:visited,&:hover,&:active {
+        color: black;
+        font-weight: bold;
+      }
+  }
+}
+
+  &__sort {
+    margin-top: 5px;
+    background-color: rgb(232, 232, 232);
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    & button {
+      background-color: rgb(232, 232, 232);
+      border: none; 
+    }
+  }
+  @include sm {
+    display: flex;
+    flex-direction: column;
+  }
+}

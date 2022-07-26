@@ -1,0 +1,153 @@
+@use '../utils//breakpoints' as *;
+
+.jobsViews{
+    display: flex;
+    flex-direction: column;
+    margin-block:10px;
+  
+    &__info {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 5px;
+  
+      & > * {
+        padding-right: 10px;
+      }
+
+      @include sm {
+        display: none;
+      }
+    }
+
+  }
+
+.jobs {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  
+  &__section {
+    margin:10px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & > * {
+      margin-bottom: 10px;
+    }
+
+    & .top {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      &__left {
+        display: flex;
+        align-items: center;
+        
+        & img {
+            width: 50px;
+            height: 50px;
+        }
+
+        & .description {
+          padding: 10px;
+
+
+          & h4 {
+           padding-bottom: 10px;
+          }
+        }
+
+      }
+
+      &__buttons button{
+        background-color: rgb(255, 255, 255);
+        border: none; 
+      }
+
+    }
+
+    & .middle {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+
+
+      & p {
+        background-color: rgba(180, 176, 176,0.2);
+        padding: 5px;
+        border-radius: 5px;
+        font-weight: bold;
+
+        &:nth-last-of-type(2) {
+          color: rgb(229, 33, 7);
+        }
+
+        &:nth-last-of-type(3) {
+          color: blue;
+        }
+       }
+    }
+
+    & .bottom {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+       & button {
+        height: 2em;
+        width: 90%;
+        border-radius: 10px;
+        border: none;
+        background-color: rgb(144, 228, 144);
+        color: rgba(255, 255, 255, 1);
+       }
+    }
+
+  }
+
+  @include md {
+    &__section {
+     width: 30%; 
+
+     & .middle {
+      flex-wrap: wrap;
+       
+      & p {
+        margin: 2px;
+      }
+    
+     }
+    }
+    
+  }
+  
+  @include sm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__section {
+      width: 80%;
+      padding: 0;
+      margin: 5px auto;
+      border: 1px solid gray;
+
+     
+    }
+
+  }
+
+}
+  
+  .red {
+    color: red;
+  }

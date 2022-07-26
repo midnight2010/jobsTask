@@ -1,0 +1,18 @@
+@forward './base/defaults';
+@forward './layout/navbar';
+@forward './layout/header';
+@forward './pages/dashboard';
+
+.main {
+ width: 100%;
+ height: 100vh;
+ position: relative;
+ display: flex;
+ flex-direction: row;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
